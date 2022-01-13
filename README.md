@@ -1,6 +1,7 @@
 # Core-Code
 Core Code bootcamp
 
+<h1>First day activity</h1>
 <ol>
   <li><h4>Java languaje is compiled or interpreted?</h4></li>
   <ul><li> R: Java can be considered both a compiled and an interpreted language because its source code is first compiled into a binary byte-code. 
@@ -22,4 +23,16 @@ Core Code bootcamp
   </ul>
   <li><h4>Why are flowcharts important to us as developers?</h4>
     <ul><li> With flowcharts we can determine the operation of a project and better define its development</li>
-    
+      </ol>
+<h1>Second day activity</h1>
+    <ol>
+      <li><h4>Translate the year you where born to binary, decimal and hexadecimal</h4></li>
+      <ul><li>Decimal: 2001</li></ul>
+      <ul><li>Hexadecimal: 7D1</li></ul>
+      <ul><li>Binary: 11111010001</li></ul>
+      <li><h4>Translate 51966 into hexadecimal and binary</h4></li>
+      <ul><li>Hexadecimal: CAFE</li></ul>
+      <ul><li>Binary: 1100101011111110</li></ul>
+      <li><h4>Base on the examples and the guide of the low-level language:</h4></li>
+      3.1 Create a program to add two numbers given by the user<br>
+       ![actividad3 1](https://user-images.githubusercontent.com/95064450/149248452-142ddbb0-6d73-4387-bf9f-7efe0183a799.jpg)
