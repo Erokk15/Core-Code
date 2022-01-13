@@ -21,8 +21,8 @@ Core Code bootcamp
     <li>OP: Y-Year_birth;</li>
     <li>Age: OP;</li>
   </ul>
-  <li><h4>Why are flowcharts important to us as developers?</h4>
-    <ul><li> With flowcharts we can determine the operation of a project and better define its development</li>
+  <li><h4>Why are flowcharts important to us as developers?</h4></li>
+    <ul><li> With flowcharts we can determine the operation of a project and better define its development</li></ul>
       </ol>
 <h1>Second day activity</h1>
     <ol>
@@ -34,5 +34,13 @@ Core Code bootcamp
       <ul><li>Hexadecimal: CAFE</li></ul>
       <ul><li>Binary: 1100101011111110</li></ul>
       <li><h4>Base on the examples and the guide of the low-level language:</h4></li>
-      3.1 Create a program to add two numbers given by the user<br>
-       ![actividad3 1](https://user-images.githubusercontent.com/95064450/149248452-142ddbb0-6d73-4387-bf9f-7efe0183a799.jpg)
+      3.1 Create a program to add two numbers given by the user<br></ol>
+      
+   ![](https://user-images.githubusercontent.com/95064450/149249047-e6ebb990-b88c-4eff-a563-574b2775be0c.png)
+   
+   
+   3.2 Create a program that display your name
+   
+   ![](https://user-images.githubusercontent.com/95064450/149252138-bfddee5d-b093-4098-a94f-5d818d9bd81c.jpg)
+
+
