@@ -4,4 +4,4 @@
 
 Javascript structure
 
-- Monday: [Daily challenges](scr/Weeks/week2/monday)
+- Monday: [Daily challenges](monday)
