@@ -1,7 +1,7 @@
 ## Wednesday activity
 
 ### 1. Holiday VIII - Duty Free. [codewars link](https://www.codewars.com/kata/57e92e91b63b6cbac20001e5)
-<pre>
+```javascript
 function dutyFree(normPrice, discount, hol){ 
   let num;
   let desc; 
@@ -10,20 +10,20 @@ function dutyFree(normPrice, discount, hol){
   desc = num / discount; 
   redondeo = Math.floor(desc* 100); 
   return redondeo; 
-} 
+```
 </pre>
 
 ### 2. Twice as old. [codewars link](https://www.codewars.com/kata/5b853229cfde412a470000d0)
-<pre>
+```javascript
 function twiceAsOld(dadYearsOld, sonYearsOld) {
   let op;
   op = Math.abs(dadYearsOld - (sonYearsOld * 2));
   return op
 }
-</pre>
+```
 
 ### 3. Valid Spacing [codewars link](https://www.codewars.com/kata/5f77d62851f6bc0033616bd8)
-<pre>
+```javascript
 function validSpacing(s) {
   let a = s;  
   if(a.trim() != s) return false;  
@@ -31,10 +31,10 @@ function validSpacing(s) {
     return true;
 }
 
-</pre>
+```
 
 ### 4. Fake Binary. [codewars link](https://www.codewars.com/kata/57eae65a4321032ce000002d)
-<pre>
+```javascript
 function fakeBin(x){
   let a = "";
   for (let i = 0; i < x.length; i++) {
@@ -43,7 +43,7 @@ function fakeBin(x){
   }
 return a;
 }
-</pre>
+```
 
 
 #### You can also check the solutions on my [codewars profile](https://www.codewars.com/users/Erokk15/completed_solutions)
