@@ -44,7 +44,7 @@ function addBinary(a,b) {
 }
 </pre>
 
-### 5. reate a function finalGrade, which calculates the final grade of a student depending on two parameters. [codewars link](https://www.codewars.com/kata/5ad0d8356165e63c140014d4) 
+### 5. Create a function, which calculates the final grade of a student depending on two parameters. [codewars link](https://www.codewars.com/kata/5ad0d8356165e63c140014d4) 
 <pre>
 function finalGrade (exam, projects) {
   if(exam > 90 || projects > 10){
