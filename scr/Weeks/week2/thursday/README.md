@@ -1,6 +1,19 @@
 ## Thursday activity
 
-### 1. Remove all exclamation marks from the end of sentence. [codewars link](https://www.codewars.com/kata/57faece99610ced690000165)
+### 1. Exclamation marks series #2. 
+Remove all exclamation marks from the end of sentence.
+
+Examples:
+```
+remove("Hi!") === "Hi"
+remove("Hi!!!") === "Hi"
+remove("!Hi") === "!Hi"
+remove("!Hi!") === "!Hi"
+remove("Hi! Hi!") === "Hi! Hi"
+remove("Hi") === "Hi"
+```
+
+#### Solution
 ```javascript
 function remove (string) {  
   let s = string;
@@ -8,9 +21,19 @@ function remove (string) {
   return s;
 }
 ```
-</pre>
+--------
+### 2. Vowel remover. 
+Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
 
-### 2. Vowel remover. [codewars link](https://www.codewars.com/kata/5547929140907378f9000039)
+Examples:
+```
+"hello"     -->  "hll"
+"codewars"  -->  "cdwrs"
+"goodbye"   -->  "gdby"
+"HELLO"     -->  "HELLO"
+```
+
+#### Solution
 ```javascript
 function shortcut (string) {
   let s = string;
@@ -24,7 +47,17 @@ function shortcut (string) {
 }
 ```
 
-### 3. Rock Paper Scissors! [codewars link](https://www.codewars.com/kata/5672a98bdbdd995fad00000f)
+### 3. Rock Paper Scissors! 
+Let's play! You have to return which player won! In case of a draw return Draw!.
+
+Examples:
+```
+rps('scissors','paper') // Player 1 won!
+rps('scissors','rock') // Player 2 won!
+rps('paper','paper') // Draw!
+```
+
+#### Solution
 ```javascript
 const rps = (p1, p2) => {
   if (p1 === p2) return 'Draw!';
@@ -35,7 +68,17 @@ const rps = (p1, p2) => {
 }
 ```
 
-### 4. Persistent Bugger. [codewars link](https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec)
+### 4. Persistent Bugger.
+Write a function that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+
+For example (Input --> Output):
+```
+39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit)
+999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
+4 --> 0 (because 4 is already a one-digit number)
+```
+
+#### Solution
 ```javascript
 function persistence(num) {
   let s = num.toString();
@@ -55,7 +98,11 @@ function persistence(num) {
   return c;
 }
 ```
-### 5. Complete your 1st Core Challenge. s
+
+------------
+### 5. Complete your 1st Core Challenge.
 - [Mission Statement](challenge)
 
-#### You can also check the solutions on my [codewars profile](https://www.codewars.com/users/Erokk15/completed_solutions)
+
+-------
+*You can also check the solutions on my [codewars profile](https://www.codewars.com/users/Erokk15/completed_solutions)*

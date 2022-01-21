@@ -3,18 +3,22 @@
   ### 1. Learn about binary, decimal and hexadecimal numbers
    - Done
    
+-----
   ### 2. Translate the year you where born to binary, decimal and hexadecimal
    - Decimal: 2001
    - Hexadecimal: 7D1
    - Binary: 11111010001
- 
+
+------
   ### 3. Translate 51966 into hexadecimal and binary
    - Hexadecimal: CAFE
    - Binary: 1100101011111110
-  
+
+------
   ### 4. Use a Low-level language, for example MIPS aseembler
    - Done
-  
+
+-----
   ### 5. Base on the examples and the guide of the low-level language:
    5.1 Create a program to add two numbers given by the user<br></ol>
       
@@ -54,7 +58,7 @@
 		syscall
    </pre>
    
-   
+
    5.2 Create a program that display your name
    <pre>
 .data
