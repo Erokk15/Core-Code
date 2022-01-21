@@ -1,0 +1,2 @@
+# Mission Statement
+I'm Erick, a web development student. i've been studying in the USAC. Now with the help of Core Code team I’m looking forward to grow as a developer and start my web developer carrer. I'm a committed and responsible persone who try to always give the best of myself to continue learning and contribute something to the community.
