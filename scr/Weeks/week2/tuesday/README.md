@@ -45,7 +45,7 @@ should return:
 'A'
 ```
 
-#### Solutiom
+#### Solution
 ```javascript
 function getChar(c) {
   let a = String.fromCharCode(c);
