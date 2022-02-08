@@ -1,6 +1,6 @@
-# THIRD WEEK 
+# Fourth WEEK 
 
-## npm,npx & Typescript
+## npm, npx & Typescript
 
 Learn about Typescript and Object Oriented Programming introduction
 
