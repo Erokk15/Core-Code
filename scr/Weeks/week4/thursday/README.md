@@ -1,108 +1,109 @@
 ## Thursday activity
 
-### 1. Fold an array
-In this kata you have to write a method that folds a given array of integers by the middle x-times.
+### 1. Detect Pangram
 
-An example says more than thousand words:
+A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
 
-```
-Fold 1-times:
-[1,2,3,4,5] -> [6,6,3]
-
-A little visualization (NOT for the algorithm but for the idea of folding):
-
- Step 1         Step 2        Step 3       Step 4       Step5
-                     5/           5|         5\          
-                    4/            4|          4\      
-1 2 3 4 5      1 2 3/         1 2 3|       1 2 3\       6 6 3
-----*----      ----*          ----*        ----*        ----*
-
-
-Fold 2-times:
-[1,2,3,4,5] -> [9,6]
-
-```
+Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 
 #### Solution
-```javascript
-function foldArray(array, runs) {
-  let arrayToFold = Array.from(array);
-    while (runs > 0) {
-      let resultArray = [];
-      while (arrayToFold.length > 1) {
-        let firstElement = arrayToFold.shift();
-        let lastElement = arrayToFold.pop();
-        resultArray.push(firstElement + lastElement);
-      }
-      arrayToFold = [...resultArray, ...arrayToFold];
-      runs--;
+```typescript
+export const isPangram = (phrase: string): boolean => {
+  let s = phrase.toLowerCase();
+  let letters = "abcdefghijklmnopqrstuvwxyz";
+    for (let i = 0; i < 26; i++){
+        if (s.indexOf(letters.charAt(i)) == -1)
+    return false;
     }
-    return arrayToFold;
+    return true;
 }
 ```
---------
-### 2. Encrypt this!
-You want to create secret messages which can be deciphered by the Decipher this! kata. Here are the conditions:
+-------
 
-1. Your message is a string containing space separated words.
-2. You need to encrypt each word in the message using the following rules:
-- The first letter must be converted to its ASCII code.
-- The second letter must be switched with the last letter
-3. Keepin' it simple: There are no special characters in the input.
+### 2. Find the missing letter
+Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
 
-Examples:
-
-```
-encryptThis("Hello") === "72olle"
-encryptThis("good") === "103doo"
-encryptThis("hello world") === "104olle 119drlo"
-```
-
-#### Solution
-```javascript
-var encryptThis = function(text) {
- return text.split(' ').map( e => {
-  if (e.length===1) return e.charCodeAt(0)
-  if (e.length===2) return `${e[0].charCodeAt(0)}${e[1]}`
-  if (e.length===3) return `${e[0].charCodeAt(0)}${e.slice(-1)}${e[1]}`
-  if (e.length > 3) return `${e[0].charCodeAt(0)}${e.slice(-1)}${e.slice(2,-1)}${e[1]}`  
-  }).join(' ');
-}
-```
-
-### 3. Format a string of names like 'Bart, Lisa & Maggie'. 
-Given: an array containing hashes of names
-
-Return: a string formatted as a list of names separated by commas except for the last two names, which should be separated by an ampersand.
+You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
+The array will always contain letters in only one case.
 
 Example:
+```
+['a','b','c','d','f'] -> 'e' ['O','Q','R','S'] -> 'P'
 
+["a","b","c","d","f"] -> "e"
+["O","Q","R","S"] -> "P"
+```
+#### Solution
+```typescript
+export function findMissingLetter(array:string[]):string {
+   let newArr = array.map(function(letter) {
+        return letter.toLowerCase()
+    })
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    let letter = newArr[0];
+    let indexLetter = alphabet.indexOf(letter);
+    alphabet = alphabet.slice(indexLetter, alphabet.length);
+    const missingLetter = alphabet.split('').filter(letter => !newArr.includes(letter))[0];
+    return array[0] === letter.toUpperCase() ? missingLetter.toUpperCase() : missingLetter.toLowerCase();
+}
+```
+-------
+
+### 3. Find the unique number
+There is an array with some numbers. All numbers are equal except for one. Try to find it!
 
 ```
-list([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ])
-// returns 'Bart, Lisa & Maggie'
-
-list([ {name: 'Bart'}, {name: 'Lisa'} ])
-// returns 'Bart & Lisa'
-
-list([ {name: 'Bart'} ])
-// returns 'Bart'
-
-list([])
-// returns ''
+findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
+findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
 ```
+#### Solution
+```typescript
+export function findUniq(arr: number[]): number {
+  return arr.filter((n) => arr.indexOf(n) === arr.lastIndexOf(n))[0];
+}
+```
+-------
+
+### 4. Reverse or rotate?
+The input is a string str of digits. Cut the string into chunks (a chunk here is a substring of the initial string) of size sz (ignore the last chunk if its size is less than sz).
+
+If a chunk represents an integer such as the sum of the cubes of its digits is divisible by 2, reverse that chunk; otherwise rotate it to the left by one position. Put together these modified chunks and return the result as a string.
+
+If
+
+- sz is <= 0 or if str is empty return ""
+- sz is greater (>) than the length of str it is impossible to take a chunk of size sz hence return "".
+
+Examples:
+```
+revrot("123456987654", 6) --> "234561876549"
+revrot("123456987653", 6) --> "234561356789"
+revrot("66443875", 4) --> "44668753"
+revrot("66443875", 8) --> "64438756"
+revrot("664438769", 8) --> "67834466"
+revrot("123456779", 8) --> "23456771"
+revrot("", 8) --> ""
+revrot("123456779", 0) --> "" 
+revrot("563000655734469485", 4) --> "0365065073456944"
+```
+Example of a string rotated to the left by one position:
+```
+s = "123456" gives "234561".
+```
+#### Solution
+```typescript
+
+```
+-------
+
+### 5. What's Your Poison?
+You receive an array of integers (0 to 9), each of them is the number of a rat which died after tasting the wine bottles. Return the number of the bottle (1..1000) which is poisoned.
 
 #### Solution
 ```javascript
-function list(names){
-  return names.reduce(function(prev, current, index){
-    if (index === 0) return current.name;
-    if (index === names.length - 1) return ${prev} & ${current.name}
-    return ${prev}, ${current.name};
-  }, '');
- }
+function find(rats) {
+  return rats.reduce((a,b) => a + Math.pow(2, b), 0);
+}
 ```
-
-
 -------
 *You can also check the solutions on my [codewars profile](https://www.codewars.com/users/Erokk15/completed_solutions)*

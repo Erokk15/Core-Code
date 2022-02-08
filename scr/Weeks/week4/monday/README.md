@@ -1,74 +1,79 @@
 ## Monday activity
 
-### 1. Who likes it?
-You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+### 1. Check [this](https://www.youtube.com/watch?v=sXQxhojSdZM) video
+- Done
 
-Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+---------
 
-```
-[]                                -->  "no one likes this"
-["Peter"]                         -->  "Peter likes this"
-["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
-["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
-["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
-```
-Note: For 4 or more names, the number in "and 2 others" simply increases.
+### 2. Follow [this](https://www.youtube.com/watch?v=909NfO1St0A) video
+- Done 
 
-#### Solution
+---------
+
+### 3. Follow [this](https://dev.to/codebubb/javascript-regex-exercises-01-5078) guide
+
 ```javascript
-function likes (names) {
-  if (names.length === 0) return 'no one likes this';
-  if (names.length === 1) return `${names[0]} likes this`;
-  if (names.length === 2) return `${names[0]} and ${names[1]} like this`;
-  if (names.length === 3) return `${names[0]}, ${names[1]} and ${names[2]} like this`;
-  if (names.length > 3) return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
-  }
+const ex1 = 'The quick brown fox jumped over the lazy dog';
+const ex2 = 'A1B2C3D4E5F6G7H8I9J10';
+const ex3 = 'The salad costs $9.99';
+const ex4 = 'Contact customer support on 0800 300 500';
+const ex5 = 'You can contact me on Twitter @codebubb or james@juniordevelopercentral.com';
+
 ```
 
------
-### 2. Bit Counting
-Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+- #### Exercise 01
+Using a regex pattern, get the 3 letter words in the ex1 string.
 
-Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case.
-
-#### Solution
 ```javascript
-var countBits = function(n) {
-let l = n.toString(2);
-let r = 0;
-
-  for (let i = 0; i < l.length; i++) {
-    if(l[i]=='1'){
-    r = r + 1;
-  }
- }
-  return r;
-}
+console.log(ex1.match(/(^|\s)[a-zA-Z]{3}($|\s)/g));
 ```
+- #### Exercise 02
+Using a regex pattern, remove all of the numbers from the ex2 string.
 
-------
-### 3. Decode the Morse code
-Your task is to implement a function that would take the morse code as input and return a decoded human-readable string.
-
-For example:
-
-```
-decodeMorse('.... . -.--   .--- ..- -.. .')
-//should return "HEY JUDE"
-```
-#### Solution
 ```javascript
-const decodeLetter = letter => {
-  return MORSE_CODE[letter];
-}
+console.log(ex2.replace(/[0-9]/g, ""));
 
-const decodeWord = word => {
-  return word.split(' ').map(decodeLetter).join('');
-}
-
-const decodeMorse = morseCode => {
-  return morseCode.trim().split('   ').map(decodeWord).join(' ');
-}
 ```
-------
-*You can also check the solutions on my [codewars profile](https://www.codewars.com/users/Erokk15/completed_solutions)*
+
+
+- #### Exercise 03
+Using a regex pattern, find the monetary value contained within the ex3 string.
+
+```javascript
+console.log(ex3.match(/\$\d{1,3}\.\d\d/)[0]);
+
+```
+
+- #### Exercise 04
+Using a regex pattern, find the telephone number contained within the ex4 string.
+
+```javascript
+console.log(ex4.match(/(\d{3,4}\s?){3}/g));
+
+```
+
+- #### Exercise 05
+Using a regex pattern, find the email address contained within the ex5 string.
+
+```javascript
+console.log(ex5.match(/\S+@\S+\.\S+/g));
+
+```
+*Javascript [link](Ex_0.js)*
+
+
+-----------
+
+### 4. Check [this](https://www.youtube.com/watch?v=RvYYCGs45L4) video
+
+- Done
+---------
+
+### 5. Follow [this](https://www.youtube.com/watch?v=DHvZLI7Db8E) video
+
+- Done
+--------
+
+### 6. Check [this](https://www.youtube.com/watch?v=rKK1q7nFt7M) video
+
+- Done
